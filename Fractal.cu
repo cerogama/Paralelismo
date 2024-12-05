@@ -28,7 +28,8 @@ __device__ int julia(int x, int y, int n) {
     const float scale = 1.5;
     float jx = scale * (float)(n / 2 - x) / (n / 2.f);
     float jy = scale * (float)(n / 2 - y) / (n / 2.f);
-    cuComplex c(-0.943, -0.249);
+    cuComplex c(0.064, 0.626);//valores constantes de la funcion julia
+
     cuComplex a(jx, jy);
 
     for (int i = 0; i < 200; i++) {
